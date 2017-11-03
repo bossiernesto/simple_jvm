@@ -1,3 +1,5 @@
+module sjvm.opcodes;
+
 enum Opcodes {
     nop = 0,
     aconst_null = 1, /*(0x1)*/ 
@@ -124,7 +126,7 @@ enum Opcodes {
     instanceof = 193, /* (0xc1) */ 
     monitorenter = 194, /* (0xc2) */
     monitorexit = 195, /* (0xc3) */
-}
+};
 
 immutable OpcodeNames =
 [
