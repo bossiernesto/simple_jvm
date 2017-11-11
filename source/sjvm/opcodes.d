@@ -1,5 +1,15 @@
 module sjvm.opcodes;
 
+import sjvm.types;
+
+f4 getf4(char* p)
+{
+	u4 iv;
+	iv = geti4(p);
+	return *(cast(f4*) &iv);
+};
+
+
 enum Opcodes {
     nop = 0,
     aconst_null = 1, /*(0x1)*/ 
@@ -332,4 +342,4 @@ immutable OpcodeNames =
 	"ifnonnull",
 	"goto_w",
 	"jsr_w"
-]
+];
